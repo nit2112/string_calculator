@@ -20,4 +20,10 @@ describe StringCalculator do
     end
   end
 
+  context "when input contains a custom delimiter" do
+    it "returns their sum" do
+      expect(StringCalculator.add("//;\n1;2")).to eq(3)
+    end
+  end
+
 end
