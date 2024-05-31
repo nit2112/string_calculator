@@ -32,4 +32,10 @@ describe StringCalculator do
     end
   end
 
+  context "when input contains mutiple negative numbers" do
+    it "raises an exception" do
+      expect { StringCalculator.add("1,-1, -2") }.to raise_error("negative numbers not allowed: -1, -2")
+    end
+  end
+
 end
