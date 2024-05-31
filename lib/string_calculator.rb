@@ -1,10 +1,15 @@
 class StringCalculator
   def self.add(input)
-    if input.empty?
-      0
-    else
-      numbers = input.split(",").map {|x| x.to_i}
-      numbers.reduce(:+)
+    delimiters = [",", "\n"]
+
+    numbers = input.split(Regexp.union(delimiters))
+    sum = 0
+
+    numbers.each do |num|
+      number = num.to_i
+      puts number
+      sum += number
     end
+    sum
   end
 end

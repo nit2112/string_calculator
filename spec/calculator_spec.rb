@@ -14,4 +14,10 @@ describe StringCalculator do
     end
   end
 
+  context "when input contains numbers separated by newlines" do
+    it "returns their sum" do
+      expect(StringCalculator.add("1\n2,3")).to eq(6)
+    end
+  end
+
 end
