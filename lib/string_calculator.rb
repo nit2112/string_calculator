@@ -12,6 +12,7 @@ class StringCalculator
 
     numbers.each do |num|
       number = num.to_i
+      raise "negative numbers not allowed: #{number}" if number < 0
       sum += number
     end
     sum
